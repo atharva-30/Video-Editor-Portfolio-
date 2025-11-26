@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head><title>Your Portfolio</title></head>
+<body>
+  <header><h1>Your Name</h1></header>
+  <section id="portfolio"><!-- Embed videos here --></section>
+  <footer>Contact info</footer>
+</body>
+</html>
