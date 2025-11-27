@@ -1,0 +1,62 @@
+/* Reels Section */
+#reels {
+    padding: 80px 5%;
+    background: #111; /* Darker background for contrast */
+}
+
+#reels h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #e74c3c;
+}
+
+#reels p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+.reel-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Narrower for vertical videos */
+    gap: 20px;
+    justify-items: center;
+}
+
+.reel-item {
+    width: 100%;
+    max-width: 250px; /* Vertical aspect ratio */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.reel-item:hover {
+    transform: scale(1.05);
+}
+
+.reel-item iframe, .reel-item video {
+    width: 100%;
+    height: 400px; /* Taller for Reels */
+    border: none;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+    .reel-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile */
+        gap: 15px;
+    }
+    
+    .reel-item {
+        max-width: 100%;
+    }
+    
+    .reel-item iframe, .reel-item video {
+        height: 300px; /* Shorter on small screens */
+    }
+}
